@@ -7,7 +7,12 @@ function createWindow () {
     height: 600,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
-    }
+    },
+    show: false
+  })
+
+  win.once('ready-to-show', ()=> {
+    win.show();
   })
 
   win.loadFile('index.html')

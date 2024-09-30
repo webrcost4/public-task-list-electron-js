@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title>Lista de tarefas</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+<body>
+
+	<style type="text/css">
+		body {
+		 -webkit-user-select: none; /* Safari */
+		  -ms-user-select: none; /* IE 10 and IE 11 */
+		  user-select: none; /* Standard syntax */
+		}
+	</style>
+
+	<section>
+		
+		<!-- Titulo da pagina -->
+		<h1>Lista de tarefas</h1>
+		
+		<!-- Lista de tarefas -->
+		<article id="tasks"></article>
+
+		<!-- Formulario -->
+		<article>
+			<form id="form">
+				<label>Titulo da tarefa</label><br/>
+				<input 
+					type="text" 
+					placeholder="Checklist" 
+					id="titleInput" 
+					required="" 
+					minlength="3" 
+				/>
+
+				<label>Nivel de urgêcia</label>
+				<select required="" id="urgencyInput">
+					<option value="">Selecione uma opção</option>
+					<option value="0">Sem pressa</option>
+					<option value="1">Moderado</option>
+					<option value="2">Urgente</option>
+				</select>
+
+				<br/><label>Descrição da tarefa</label><br/>
+				<textarea
+					placeholder="Fazer checklist ABC-1234" 
+					id="descriptionInput"  
+					required="" 
+					minlength="3"
+					rows="10"
+				></textarea>
+				<input type="submit" value="Enviar">
+			</form>
+		</article>
+
+	</section>
+
+	<script type="text/javascript" src="./src/scripts.js"></script>
+    
+</body>
+</html>
